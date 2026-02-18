@@ -319,9 +319,9 @@ extern void led_process_thread(void *d0, void *d1, void *d2) {
 
             // Blink the leds, always using a separation blink
             // We don't know RGB state, so the separation blink is useful
-            set_rgb_leds(0, CONFIG_RGBLED_WIDGET_INTERVAL_MS);
+            // set_rgb_leds(0, CONFIG_RGBLED_WIDGET_INTERVAL_MS);
             set_rgb_leds(blink.color, blink.duration_ms);
-            set_rgb_leds(0, CONFIG_RGBLED_WIDGET_INTERVAL_MS);
+            // set_rgb_leds(0, CONFIG_RGBLED_WIDGET_INTERVAL_MS);
 
             // wait interval before processing another blink
             set_rgb_leds(led_layer_color, blink.sleep_ms > 0 ? blink.sleep_ms :
